@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skin Clue Clinic – Premium Skin Treatment</title>
-  <meta name="description" content="Skin Clue Clinic offers world-class dermatology and advanced skin treatments. Experience luxury skincare in an award-winning clinic environment." />
+  <title>Dr Ameer Faizal's Dental Clinic – Premium Dental Care</title>
+  <meta name="description" content="Dr Ameer Faizal's Dental Clinic offers world-class dentistry and advanced oral treatments. Experience luxury dental care in an award-winning clinic environment." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -16,20 +16,25 @@
   <header class="nav-header" id="navbar">
     <div class="nav-inner container">
       <a href="#hero" class="logo-link">
-        <img src="logo-icon.png" alt="Skin Clue Clinic Logo Icon" class="logo-img" />
+        <img src="clinic-logo3.png" alt="Dr Ameer Faizal's Dental Clinic Logo" class="logo-img" />
         <div class="logo-text">
-          <span class="logo-name">SKIN CLUE</span>
-          <span class="logo-sub">CLINIC</span>
+          <span class="logo-name">DR AMEER FAIZAL'S</span>
+          <span class="logo-sub">DENTAL CLINIC</span>
         </div>
       </a>
       <nav class="nav-links" id="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#treatments">Treatments</a>
-        <a href="#results">Results</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#book" class="btn-primary nav-cta">Book Now</a>
+      <div class="nav-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="#book" class="btn-primary nav-cta">Book Now</a>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -38,32 +43,51 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg"></div>
+
+    <!-- Full-bleed background photo -->
+    <div class="hero-bg-img">
+      <img src="IMG_4572.JPEG" alt="Dr Ameer Faizal's Dental Clinic — Luxury Reception Interior" />
+    </div>
+
+    <!-- Cinematic gradient overlay -->
     <div class="hero-overlay"></div>
 
-    <!-- LEFT: Content -->
-    <div class="hero-left">
+    <!-- Centered / left-aligned content -->
+    <div class="hero-body container">
       <div class="hero-content">
-        <p class="hero-tag">LUXURY DERMATOLOGY & SKIN SCIENCE</p>
-        <h1 class="hero-title">Reveal Your <em>Radiant</em><br/>True Skin</h1>
-        <p class="hero-desc">Where advanced science meets timeless beauty. Experience bespoke skin treatments crafted by expert dermatologists in a sanctuary of luxury and care.</p>
+        <p class="hero-tag">LUXURY DENTISTRY &amp; ORAL SCIENCE</p>
+        <h1 class="hero-title">Reveal Your <em>Perfect</em><br/>Smile Today</h1>
+        <p class="hero-desc">Where advanced dental science meets timeless care. Experience bespoke oral treatments crafted by Dr&nbsp;Ameer Faizal in a sanctuary of precision and comfort.</p>
         <div class="hero-actions">
           <a href="#book" class="btn-primary" id="hero-book-btn">Book a Consultation</a>
           <a href="#services" class="btn-ghost" id="hero-services-btn">Explore Treatments</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Years of Excellence</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">8,000+</span><span class="stat-label">Happy Patients</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Expert Treatments</span></div>
-        </div>
       </div>
     </div>
 
-    <!-- RIGHT: Clinic Image -->
-    <div class="hero-image-panel">
-      <img src="clinic-interior.png" alt="Skin Clue Clinic Interior" />
+    <!-- Stats strip pinned to bottom -->
+    <div class="hero-stats-strip">
+      <div class="container hero-stats-inner">
+        <div class="stat">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">10,000+</span>
+          <span class="stat-label">Happy Patients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">25+</span>
+          <span class="stat-label">Expert Treatments</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">★ 4.9</span>
+          <span class="stat-label">Patient Rating</span>
+        </div>
+      </div>
     </div>
 
     <div class="hero-scroll-hint">
@@ -75,22 +99,22 @@
   <!-- MARQUEE RIBBON -->
   <div class="ribbon" aria-hidden="true">
     <div class="ribbon-track">
-      <span>Advanced Skin Science</span><span class="dot">✦</span>
-      <span>Laser Treatments</span><span class="dot">✦</span>
-      <span>Anti-Aging Therapies</span><span class="dot">✦</span>
-      <span>Hydrafacial</span><span class="dot">✦</span>
-      <span>Chemical Peels</span><span class="dot">✦</span>
-      <span>PRP Therapy</span><span class="dot">✦</span>
-      <span>Acne Solutions</span><span class="dot">✦</span>
-      <span>Skin Brightening</span><span class="dot">✦</span>
-      <span>Advanced Skin Science</span><span class="dot">✦</span>
-      <span>Laser Treatments</span><span class="dot">✦</span>
-      <span>Anti-Aging Therapies</span><span class="dot">✦</span>
-      <span>Hydrafacial</span><span class="dot">✦</span>
-      <span>Chemical Peels</span><span class="dot">✦</span>
-      <span>PRP Therapy</span><span class="dot">✦</span>
-      <span>Acne Solutions</span><span class="dot">✦</span>
-      <span>Skin Brightening</span><span class="dot">✦</span>
+      <span>Advanced Dental Science</span><span class="dot">✦</span>
+      <span>Teeth Whitening</span><span class="dot">✦</span>
+      <span>Dental Implants</span><span class="dot">✦</span>
+      <span>Invisalign</span><span class="dot">✦</span>
+      <span>Root Canal</span><span class="dot">✦</span>
+      <span>Veneers</span><span class="dot">✦</span>
+      <span>Orthodontics</span><span class="dot">✦</span>
+      <span>Smile Design</span><span class="dot">✦</span>
+      <span>Advanced Dental Science</span><span class="dot">✦</span>
+      <span>Teeth Whitening</span><span class="dot">✦</span>
+      <span>Dental Implants</span><span class="dot">✦</span>
+      <span>Invisalign</span><span class="dot">✦</span>
+      <span>Root Canal</span><span class="dot">✦</span>
+      <span>Veneers</span><span class="dot">✦</span>
+      <span>Orthodontics</span><span class="dot">✦</span>
+      <span>Smile Design</span><span class="dot">✦</span>
     </div>
   </div>
 
@@ -100,11 +124,8 @@
       <div class="about-visual">
         <div class="about-img-wrap">
           <div class="about-img-bg"></div>
-          <div class="about-img-card">
-            <div class="clinic-logo-large">
-              <img src="logo-icon.png" alt="Skin Clue Clinic" />
-            </div>
-            <p class="about-img-label">SKIN CLUE CLINIC</p>
+          <div class="about-photo-card">
+            <img src="IMG_4573.jpg" alt="Dr Ameer Faizal's Dental Clinic — Award-Winning Waiting Lounge" />
           </div>
         </div>
         <div class="about-badge">
@@ -114,13 +135,13 @@
       </div>
       <div class="about-copy">
         <p class="section-tag">OUR STORY</p>
-        <h2 class="section-title">A Sanctuary Dedicated <em>to Your Skin</em></h2>
-        <p class="about-text">Skin Clue Clinic was founded on the belief that every person deserves access to world-class dermatological care delivered with warmth, precision, and artistry. Our multidisciplinary team of specialists combines the latest evidence-based treatments with a deeply personal approach.</p>
+        <h2 class="section-title">A Sanctuary Dedicated <em>to Your Smile</em></h2>
+        <p class="about-text">Dr Ameer Faizal's Dental Clinic was founded on the belief that every person deserves access to world-class dental care delivered with warmth, precision, and artistry. Our specialist team combines the latest evidence-based treatments with a deeply personal approach.</p>
         <p class="about-text">Nestled in a beautifully designed environment that soothes the senses, each visit is a restorative experience — from consultation to treatment to aftercare.</p>
         <div class="about-pillars">
-          <div class="pillar"><div class="pillar-icon">◈</div><div><strong>Evidence-Based</strong><p>Only clinically proven, FDA-cleared modalities</p></div></div>
-          <div class="pillar"><div class="pillar-icon">◈</div><div><strong>Personalised</strong><p>Bespoke protocols tailored to your unique skin</p></div></div>
-          <div class="pillar"><div class="pillar-icon">◈</div><div><strong>Luxurious</strong><p>Premium-grade products and devices</p></div></div>
+          <div class="pillar"><div class="pillar-icon">◈</div><div><strong>Evidence-Based</strong><p>Only clinically proven, internationally cleared modalities</p></div></div>
+          <div class="pillar"><div class="pillar-icon">◈</div><div><strong>Personalised</strong><p>Bespoke protocols tailored to your unique dental needs</p></div></div>
+          <div class="pillar"><div class="pillar-icon">◈</div><div><strong>Premium Care</strong><p>Premium-grade materials and state-of-the-art devices</p></div></div>
         </div>
       </div>
     </div>
@@ -134,40 +155,40 @@
         <h2 class="section-title">Our Signature <em>Services</em></h2>
       </div>
       <div class="services-grid">
-        <div class="service-card" id="svc-laser">
+        <div class="service-card" id="svc-implants">
           <div class="svc-icon">✦</div>
-          <h3>Laser Therapy</h3>
-          <p>Precision laser treatments targeting pigmentation, scarring, hair removal and skin resurfacing.</p>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacements that restore your smile, function, and confidence with precision-placed titanium implants.</p>
           <a href="#contact" class="svc-link">Learn More →</a>
         </div>
-        <div class="service-card" id="svc-anti-aging">
+        <div class="service-card" id="svc-orthodontics">
           <div class="svc-icon">✦</div>
-          <h3>Anti-Aging</h3>
-          <p>Botox, fillers, micro-needling, and RF lifting to restore youthful volume and firmness.</p>
+          <h3>Orthodontics</h3>
+          <p>Braces, Invisalign and clear aligners to straighten teeth and correct bite issues for a beautifully aligned smile.</p>
           <a href="#contact" class="svc-link">Learn More →</a>
         </div>
-        <div class="service-card" id="svc-hydra">
+        <div class="service-card" id="svc-whitening">
           <div class="svc-icon">✦</div>
-          <h3>Hydrafacial</h3>
-          <p>Deep hydration, exfoliation and nourishment in a single, zero-downtime luxury treatment.</p>
+          <h3>Teeth Whitening</h3>
+          <p>Professional-grade whitening treatments for a brighter, whiter smile in a single visit with long-lasting results.</p>
           <a href="#contact" class="svc-link">Learn More →</a>
         </div>
-        <div class="service-card" id="svc-acne">
+        <div class="service-card" id="svc-rootcanal">
           <div class="svc-icon">✦</div>
-          <h3>Acne Solutions</h3>
-          <p>Comprehensive acne management combining topicals, peels, light therapy and lifestyle coaching.</p>
+          <h3>Root Canal</h3>
+          <p>Painless, precision root canal therapy to save damaged teeth and eliminate infection with the latest endodontic techniques.</p>
           <a href="#contact" class="svc-link">Learn More →</a>
         </div>
-        <div class="service-card" id="svc-prp">
+        <div class="service-card" id="svc-veneers">
           <div class="svc-icon">✦</div>
-          <h3>PRP Therapy</h3>
-          <p>Harness your body's natural growth factors for accelerated skin and hair rejuvenation.</p>
+          <h3>Veneers &amp; Crowns</h3>
+          <p>Ultra-thin porcelain veneers and crowns crafted for a flawless, natural-looking transformation of your smile.</p>
           <a href="#contact" class="svc-link">Learn More →</a>
         </div>
-        <div class="service-card" id="svc-peels">
+        <div class="service-card" id="svc-periodontal">
           <div class="svc-icon">✦</div>
-          <h3>Chemical Peels</h3>
-          <p>Medical-grade peels for brighter, smoother and more even-toned skin in minimal sessions.</p>
+          <h3>Periodontal Care</h3>
+          <p>Comprehensive gum disease treatment and maintenance to protect the foundation of your long-term oral health.</p>
           <a href="#contact" class="svc-link">Learn More →</a>
         </div>
       </div>
@@ -185,35 +206,85 @@
         <div class="treatment-item" id="tr-1">
           <div class="tr-num">01</div>
           <div class="tr-body">
-            <h3>Signature Glow Facial</h3>
-            <p>A bespoke 90-minute ritual combining enzyme exfoliation, cryotherapy and LED photobiomodulation for an instant luminous glow.</p>
+            <h3>Signature Smile Design</h3>
+            <p>A bespoke full-smile makeover combining digital planning, veneers, whitening and contouring for a life-changing, celebrity-worthy smile.</p>
           </div>
           <div class="tr-tag">Most Popular</div>
         </div>
         <div class="treatment-item" id="tr-2">
           <div class="tr-num">02</div>
           <div class="tr-body">
-            <h3>Gold Infusion Rejuvenation</h3>
-            <p>Nano-gold particles infused via ultrasound technology to deeply nourish and plump for visibly younger skin.</p>
+            <h3>Full Arch Implant Restoration</h3>
+            <p>State-of-the-art implant-supported full arch restoration — replace an entire row of teeth with natural function and aesthetics.</p>
           </div>
           <div class="tr-tag">Luxury</div>
         </div>
         <div class="treatment-item" id="tr-3">
           <div class="tr-num">03</div>
           <div class="tr-body">
-            <h3>Fractional CO₂ Resurfacing</h3>
-            <p>The gold-standard laser treatment for deep scars, large pores and sun damage with remarkable long-term results.</p>
+            <h3>Invisalign Clear Aligners</h3>
+            <p>The gold-standard clear aligner system for invisible orthodontic correction — straighten teeth without anyone knowing.</p>
           </div>
           <div class="tr-tag">Advanced</div>
         </div>
         <div class="treatment-item" id="tr-4">
           <div class="tr-num">04</div>
           <div class="tr-body">
-            <h3>Skin Brightening Protocol</h3>
-            <p>A curated multi-step treatment targeting melasma, hyperpigmentation and uneven tone for a radiant complexion.</p>
+            <h3>Laser Gum Contouring</h3>
+            <p>A precise laser procedure reshaping the gum line to reveal more of the tooth for a balanced, harmonious smile frame.</p>
           </div>
-          <div class="tr-tag">Brightening</div>
+          <div class="tr-tag">Specialist</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">INSIDE THE CLINIC</p>
+        <h2 class="section-title">A Space Designed for <em>Your Comfort</em></h2>
+        <p class="gallery-intro">Step inside Dr Ameer Faizal's Dental Clinic — where luxury design meets clinical precision across every treatment room and lounge.</p>
+      </div>
+    </div>
+    <!-- Gap-free named-placement gallery grid -->
+    <div class="gallery-grid">
+      <!-- Hero tall item: reception with clinic logo -->
+      <div class="gallery-item gi-hero" id="gi-reception">
+        <img src="IMG_4572.JPEG" alt="Clinic Reception — Signature Luxury Interior" loading="lazy" />
+        <div class="gallery-caption">The Welcome — Our Signature Reception</div>
+      </div>
+      <!-- Top-right row 1 -->
+      <div class="gallery-item gi-top-r1" id="gi-awards">
+        <img src="IMG_4574.JPEG" alt="Clinic Awards Wall" loading="lazy" />
+        <div class="gallery-caption">Accolades &amp; Certifications</div>
+      </div>
+      <div class="gallery-item gi-top-r2" id="gi-lounge">
+        <img src="IMG_4573.jpg" alt="Patient Waiting Lounge" loading="lazy" />
+        <div class="gallery-caption">Premium Waiting Lounge</div>
+      </div>
+      <!-- Mid-right row 2 -->
+      <div class="gallery-item gi-mid-r1" id="gi-tr1">
+        <img src="IMG_4577.jpg" alt="Treatment Room" loading="lazy" />
+        <div class="gallery-caption">Multi-Chair Treatment Suite</div>
+      </div>
+      <div class="gallery-item gi-mid-r2" id="gi-tr2">
+        <img src="IMG_4575.jpg" alt="Dental Chair" loading="lazy" />
+        <div class="gallery-caption">Precision Dental Suite</div>
+      </div>
+      <!-- Bottom row 3 — three equal tiles -->
+      <div class="gallery-item gi-bot-1" id="gi-tr3">
+        <img src="IMG_4576.jpg" alt="Treatment Bay" loading="lazy" />
+        <div class="gallery-caption">Comfort-First Treatment Bay</div>
+      </div>
+      <div class="gallery-item gi-bot-2" id="gi-specialist">
+        <img src="IMG_4579.jpg" alt="Specialist Microscope Room" loading="lazy" />
+        <div class="gallery-caption">Specialist Microscope Room</div>
+      </div>
+      <div class="gallery-item gi-bot-3" id="gi-doctor">
+        <img src="IMG-20260728-WA0015.jpg" alt="Dr Ameer Faizal at Clinic Celebration" loading="lazy" />
+        <div class="gallery-caption">Dr Ameer Faizal &amp; Team</div>
       </div>
     </div>
   </section>
@@ -228,18 +299,18 @@
       <div class="testi-grid">
         <div class="testi-card" id="t1">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"After years of struggling with melasma, Skin Clue's brightening protocol gave me the confidence I thought I'd lost forever. The results are simply remarkable."</p>
-          <div class="testi-author"><div class="author-avatar">SA</div><div><strong>Sara A.</strong><span>Skin Brightening Patient</span></div></div>
+          <p class="testi-text">"After years of hiding my smile, Dr Ameer Faizal's veneers gave me the confidence I thought I'd lost forever. The results are simply remarkable."</p>
+          <div class="testi-author"><div class="author-avatar">SA</div><div><strong>Sara A.</strong><span>Smile Design Patient</span></div></div>
         </div>
         <div class="testi-card featured" id="t2">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"The Signature Glow Facial is my monthly ritual now. The ambience, the expertise, the products — nothing comes close. I leave looking 10 years younger every single time."</p>
-          <div class="testi-author"><div class="author-avatar">NR</div><div><strong>Nadia R.</strong><span>Regular Client</span></div></div>
+          <p class="testi-text">"My Invisalign journey with Dr Faizal was seamless. The clinic ambience, the expertise, the care — nothing comes close. I leave every visit smiling wider."</p>
+          <div class="testi-author"><div class="author-avatar">NR</div><div><strong>Nadia R.</strong><span>Invisalign Patient</span></div></div>
         </div>
         <div class="testi-card" id="t3">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"The PRP hair treatment exceeded all my expectations. Professional staff, serene environment and visible results within 3 sessions. Truly world-class care."</p>
-          <div class="testi-author"><div class="author-avatar">MK</div><div><strong>Mohammed K.</strong><span>PRP Hair Therapy Patient</span></div></div>
+          <p class="testi-text">"The dental implants exceeded all my expectations. Professional staff, serene environment and visible results. Truly world-class dental care."</p>
+          <div class="testi-author"><div class="author-avatar">MK</div><div><strong>Mohammed K.</strong><span>Dental Implant Patient</span></div></div>
         </div>
       </div>
     </div>
@@ -251,9 +322,9 @@
       <div class="book-copy">
         <p class="section-tag">BEGIN YOUR JOURNEY</p>
         <h2 class="section-title">Reserve Your<br/><em>Consultation Today</em></h2>
-        <p class="book-desc">Take the first step toward your best skin. Our specialists will design a personalised treatment plan just for you.</p>
+        <p class="book-desc">Take the first step toward your best smile. Our specialists will design a personalised treatment plan just for you.</p>
         <ul class="book-perks">
-          <li>✓ Complimentary skin analysis</li>
+          <li>✓ Complimentary oral health analysis</li>
           <li>✓ Personalised treatment roadmap</li>
           <li>✓ No obligation consultation</li>
         </ul>
@@ -266,7 +337,7 @@
           </div>
           <div class="form-group">
             <label for="f-phone">Phone Number</label>
-            <input type="tel" id="f-phone" name="phone" placeholder="+60 12 345 6789" required />
+            <input type="tel" id="f-phone" name="phone" placeholder="+91 98765 43210" required />
           </div>
         </div>
         <div class="form-group">
@@ -277,20 +348,20 @@
           <label for="f-service">Service of Interest</label>
           <select id="f-service" name="service">
             <option value="">Select a treatment…</option>
-            <option>Laser Therapy</option>
-            <option>Anti-Aging / Injectables</option>
-            <option>Hydrafacial</option>
-            <option>Acne Solutions</option>
-            <option>PRP Therapy</option>
-            <option>Chemical Peels</option>
-            <option>Signature Glow Facial</option>
-            <option>Skin Brightening Protocol</option>
-            <option>Other / General Consultation</option>
+            <option>Dental Implants</option>
+            <option>Orthodontics / Invisalign</option>
+            <option>Teeth Whitening</option>
+            <option>Root Canal Treatment</option>
+            <option>Veneers &amp; Crowns</option>
+            <option>Periodontal Care</option>
+            <option>Smile Design</option>
+            <option>Laser Gum Contouring</option>
+            <option>General Consultation</option>
           </select>
         </div>
         <div class="form-group">
           <label for="f-msg">Message (Optional)</label>
-          <textarea id="f-msg" name="message" rows="3" placeholder="Tell us about your skin concerns…"></textarea>
+          <textarea id="f-msg" name="message" rows="3" placeholder="Tell us about your dental concerns…"></textarea>
         </div>
         <button type="submit" class="btn-primary full-width" id="submit-booking-btn">Request Appointment</button>
         <p class="form-note">We'll contact you within 24 hours to confirm your appointment.</p>
@@ -304,44 +375,61 @@
       <div class="contact-info">
         <p class="section-tag">FIND US</p>
         <h2 class="section-title">Visit Our <em>Clinic</em></h2>
+
+        <!-- Google rating badge -->
+        <div class="google-rating">
+          <span class="g-stars">★★★★★</span>
+          <span class="g-score">5.0</span>
+          <span class="g-reviews">· 12 Google Reviews</span>
+        </div>
+
+        <p class="contact-desc">Dr. Ameer Faizal's Dental Care Microscope Clinic is committed to providing advanced, patient-centered dental care using modern technology and evidence-based treatments. We specialise in microscope-assisted dentistry for precise, comfortable outcomes.</p>
+
         <div class="contact-items">
           <div class="contact-item">
             <span class="c-icon">📍</span>
             <div>
               <strong>Address</strong>
-              <p>Skin Clue Clinic, Kuala Lumpur, Malaysia</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="c-icon">📞</span>
-            <div>
-              <strong>Phone</strong>
-              <p>+60 3-XXXX XXXX</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="c-icon">✉</span>
-            <div>
-              <strong>Email</strong>
-              <p>hello@skinclueclinic.com</p>
+              <p>First Floor, Moriah Plaza,<br/>Dr. Ameer Faizal's Dental Care,<br/>Thengana, Kerala – 686536</p>
             </div>
           </div>
           <div class="contact-item">
             <span class="c-icon">🕐</span>
             <div>
               <strong>Opening Hours</strong>
-              <p>Mon – Sat: 9:00 AM – 7:00 PM</p>
-              <p>Sunday: 10:00 AM – 3:00 PM</p>
+              <p>Monday – Saturday: 9:00 AM onwards</p>
+              <p>Sunday: By Appointment</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="c-icon">✉</span>
+            <div>
+              <strong>Email</strong>
+              <p>hello@drameerdentalcare.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="c-icon">🌐</span>
+            <div>
+              <strong>Find us on Google</strong>
+              <a href="https://www.google.com/maps/place/Dr.Ameer+Faizal%27s+Dental+Care/@9.5930808,76.5787349,17z" target="_blank" rel="noopener" class="g-link">View on Google Maps →</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="map-placeholder">
-        <div class="map-inner">
-          <span class="map-pin">📍</span>
-          <p>Skin Clue Clinic</p>
-          <p class="map-sub">Kuala Lumpur, Malaysia</p>
-        </div>
+
+      <!-- Embedded Google Map -->
+      <div class="map-embed">
+        <iframe
+          title="Dr Ameer Faizal's Dental Care — Thengana, Kerala"
+          src="https://maps.google.com/maps?q=First+Floor+Moriah+Plaza+Thengana+Kerala+686536&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
@@ -350,20 +438,21 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="logo-icon.png" alt="Skin Clue Clinic" class="footer-logo" />
+        <img src="clinic-logo3.png" alt="Dr Ameer Faizal's Dental Clinic" class="footer-logo" />
         <div>
-          <p class="footer-name">SKIN CLUE CLINIC</p>
-          <p class="footer-tagline">Where Science Meets Beauty</p>
+          <p class="footer-name">DR AMEER FAIZAL'S DENTAL CLINIC</p>
+          <p class="footer-tagline">Where Smiles Are Crafted with Care</p>
         </div>
       </div>
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#treatments">Treatments</a>
+        <a href="#gallery">Gallery</a>
         <a href="#book">Book Now</a>
         <a href="#contact">Contact</a>
       </div>
-      <p class="footer-copy">© 2025 Skin Clue Clinic. All Rights Reserved.</p>
+      <p class="footer-copy">© 2025 Dr Ameer Faizal's Dental Clinic. All Rights Reserved.</p>
     </div>
   </footer>
 
