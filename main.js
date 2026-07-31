@@ -22,10 +22,27 @@ window.addEventListener('scroll', () => {
 // ── HAMBURGER ──
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+// Close on backdrop click or nav link tap
 document.addEventListener('click', e => {
-  if (!hamburger.contains(e.target) && !navLinks.contains(e.target))
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
     navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
 });
 
 // ── SCROLL REVEAL ──
@@ -66,3 +83,12 @@ function showToast() {
   toast.classList.add('show');
   setTimeout(() => toast.classList.remove('show'), 4000);
 }
+
+// ── HERO VIDEO AUTOPLAY SAFEGUARD ──
+const heroVid = document.querySelector('.hero-bg-video');
+if (heroVid) {
+  heroVid.play().catch(() => {
+    // Autoplay fallback if restricted by browser policy
+  });
+}
+
