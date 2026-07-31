@@ -153,9 +153,27 @@ img{max-width:100%;display:block;}
 .nav-header.scrolled .nav-links a{color:var(--text);}
 .nav-header.scrolled .nav-links a:hover{color:var(--gold);}
 .nav-cta{padding:.6rem 1.6rem;font-size:.82rem;}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.3rem;}
-.hamburger span{display:block;width:24px;height:2px;background:#fff;transition:.3s;border-radius:2px;}
+.hamburger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  background:none;border:none;cursor:pointer;padding:.4rem;
+  position:relative;z-index:1002;
+}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;transition:.3s ease;border-radius:2px;transform-origin:center;}
 .nav-header.scrolled .hamburger span{background:var(--brown-dark);}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:var(--brown-dark);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:var(--brown-dark);}
+[data-theme="dark"] .hamburger.open span{background:#E8E0D0 !important;}
+
+/* Backdrop overlay for mobile navigation drawer */
+.nav-backdrop{
+  position:fixed;inset:0;background:rgba(15,8,3,0.6);
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  z-index:1000;opacity:0;pointer-events:none;transition:opacity .35s ease;
+}
+.nav-backdrop.open{
+  opacity:1;pointer-events:auto;
+}
 
 /* ── HERO (full-bleed cinematic) ── */
 .hero{
@@ -569,15 +587,16 @@ img{max-width:100%;display:block;}
   .nav-links,.nav-cta{display:none;}
   .nav-links.open{
     display:flex;flex-direction:column;gap:0;
-    position:fixed;top:0;right:0;bottom:0;width:min(280px,85vw);
-    background:var(--warm-white);
-    padding:5rem 0 calc(2rem + env(safe-area-inset-bottom));
-    box-shadow:-4px 0 40px rgba(0,0,0,0.18);z-index:999;
+    position:fixed;top:0;right:0;bottom:0;width:min(300px,85vw);
+    background:var(--bg-page);
+    padding:5.5rem 0 calc(2rem + env(safe-area-inset-bottom));
+    box-shadow:-8px 0 40px rgba(0,0,0,0.25);
+    z-index:1001;
     overflow-y:auto;
   }
   .nav-links.open a{
-    color:var(--text) !important;
-    padding:1rem 2rem;font-size:1rem;letter-spacing:.06em;
+    color:var(--text-main) !important;
+    padding:1.1rem 2rem;font-size:1.05rem;letter-spacing:.06em;
     border-bottom:1px solid var(--border-color);
     display:block;
   }
