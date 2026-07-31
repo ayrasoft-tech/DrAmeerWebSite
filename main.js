@@ -35,7 +35,8 @@ function toggleNav(open) {
   const isOpen = open !== undefined ? open : !navLinks.classList.contains('open');
   navLinks.classList.toggle('open', isOpen);
   hamburger.classList.toggle('open', isOpen);
-  backdrop.classList.toggle('open', isOpen);
+  if (backdrop) backdrop.classList.toggle('open', isOpen);
+  document.body.classList.toggle('has-open-nav', isOpen);
   hamburger.setAttribute('aria-expanded', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
 }

@@ -167,12 +167,18 @@ img{max-width:100%;display:block;}
 
 /* Backdrop overlay for mobile navigation drawer */
 .nav-backdrop{
-  position:fixed;inset:0;background:rgba(15,8,3,0.6);
-  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-  z-index:1000;opacity:0;pointer-events:none;transition:opacity .35s ease;
+  position:fixed;inset:0;background:rgba(15,8,3,0.55);
+  z-index:998;opacity:0;pointer-events:none;transition:opacity .3s ease;
 }
 .nav-backdrop.open{
   opacity:1;pointer-events:auto;
+}
+
+/* Disable header backdrop-filter when mobile menu is open to prevent drawer blurring */
+body.has-open-nav .nav-header{
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  box-shadow:none !important;
 }
 
 /* ── HERO (full-bleed cinematic) ── */
@@ -588,7 +594,9 @@ img{max-width:100%;display:block;}
   .nav-links.open{
     display:flex;flex-direction:column;gap:0;
     position:fixed;top:0;right:0;bottom:0;width:min(300px,85vw);
-    background:var(--bg-page);
+    background:var(--warm-white) !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
     padding:5.5rem 0 calc(2rem + env(safe-area-inset-bottom));
     box-shadow:-8px 0 40px rgba(0,0,0,0.25);
     z-index:1001;
