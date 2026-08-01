@@ -1,0 +1,6 @@
+# Robots.txt for Dr Ameer Faizal's Dental Care
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://drameerdentalcare.com/sitemap.xml
